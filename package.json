@@ -1,0 +1,19 @@
+{
+  "name": "good-burger",
+  "version": "1.0.0",
+  "description": "Home Of The Good Burger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriso/Good-Burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitriso/Good-Burger/issues"
+  },
+  "homepage": "https://github.com/dmitriso/Good-Burger#readme"
+}
