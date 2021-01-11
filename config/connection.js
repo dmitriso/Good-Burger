@@ -1,7 +1,5 @@
 const mysql = require('mysql');
 
-module.exports = connection.js;
-
 //CONNECTING TO THE DATABASE
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -14,6 +12,11 @@ const connection = mysql.createConnection({
   connection.connect((err) => {
     if (err) throw err;
     console.log('connected as id ' + connection.threadId);
-    init();
-  });
   
+  });
+
+  // MODULE EXPORT
+  module.exports = connection;
+
+
+
