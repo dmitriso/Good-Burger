@@ -1,5 +1,5 @@
 const orm = require('../config/orm.js');
-// BURGER OBJECT CONTAINING METHODS
+// BURGER OBJECT CONTAINING METHODS TO BE USED FOR THE DATABASE
 var burger = {
     all: function(cb) {
       orm.all("burgers", function(res) {
@@ -15,7 +15,12 @@ var burger = {
       orm.update("burgers", objColVals, condition, function(res) {
         cb(res);
       });
-    }
+    },
+    delete: function( condition, cb) {
+        orm.delete("burgers", condition, function(res) {
+          cb(res);
+        });
+      }
   };
   
 //EXPORT MODULE
