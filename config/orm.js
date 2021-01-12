@@ -1,17 +1,15 @@
-const connection = require('connection.js');
+const connection = require('./connection.js');
 
-module.exports = orm.js;
-
-//Create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
-
-function selectAll() {
-
+// HELPER FUNCTION FOR SQL SYNTAX
+function printQuestionMarks(num) {
+    var arr = [];
+    for (var i = 0; i < num; i++) {
+        arr.push("?");
+    }
+    return arr.toString();
 }
 
-function insertOne() {
 
-}
-
-function updateOne() {
-
-}
+  
+// EXPORT THE ORM FOR THE MODEL (good_burger.js)
+module.exports = orm;
