@@ -9,6 +9,14 @@ router.get("/", function (req, res) {
     });
 });
 
+// THIS ROUTE DISPLAYS THE BURGERS READY TO BE DEVOURED
+router.post("/api/burgers", function (req, res) {
+    burger.create(["burger_name"], [req.body.burger_name],
+        function (result) {
+            res.json({ id: result.insertId });
+        });
+});
+
 
 // EXPORTING ROUTER MODULE
 module.exports = router;
