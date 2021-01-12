@@ -1,4 +1,3 @@
-
 <h1>Good-Burger</h1>
 
 
@@ -19,20 +18,20 @@
 
 <ul>
   {{#each burgers}}
-    {{#unless devoured}}
-    <h3>{{burger_name}}</h3>
-     <button class="devoured" id={{id}}>Devour!</button>
-    {{/unless}}
+  {{#unless devoured}}
+  <h3>{{burger_name}}</h3>
+  <button class="devoured" id={{id}}>Devour!</button>
+  {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Burgers That Were Devoured!</h2>
+<h2>Devoured!</h2>
 
 <ul>
   {{#each burgers}}
-    {{#if devoured}}
-      <h3>{{burger_name}}</h3>
-    {{/if}}
+  {{#if devoured}}
+  <h3>{{burger_name}}</h3>
+  <button class="delete" id={{id}}>Digest!</button>
+  {{/if}}
   {{/each}}
 </ul>
-
