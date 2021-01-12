@@ -1,6 +1,15 @@
 const express = require('express');
-const good_burger = require('good_burger.js');
+const burger = require('../models/good_burger.js');
+const router = express.Router();
 
-nodule.exports = burgers_controller.js;
+// THIS DISPLAYS ALL THE BURGER DATA TO THE MAIN PAGE
+router.get("/", function (req, res) {
+    burger.all(function (data) {
+        res.render("index", { burgers: data });
+    });
+});
 
-// Create the router for the app, and export the router at the end of your file.
+
+// EXPORTING ROUTER MODULE
+module.exports = router;
+
