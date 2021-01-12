@@ -1,22 +1,22 @@
 const mysql = require('mysql');
+var connection;
 
-//CONNECTING TO THE DATABASE
-const connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: 'Dmso0929',
-    database: 'burgers_db',
-  });
-  //CONFIRMS IF CONNECTION WAS SUCCESSFUL OR NOT
-  connection.connect((err) => {
-    if (err) throw err;
-    console.log('connected as id ' + connection.threadId);
-  
-  });
+// CONNECTING TO JAWS DB THROUGH HEROKU
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: 'hwr4wkxs079mtb19.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'xh41upqabqxjra72',
+    password: 'pfgh1uih4nx6x78c',
+    database: 'nj53r829xwhvarg0'
+  })
+}
 
-  // MODULE EXPORT
-  module.exports = connection;
+connection.connect();
+
+// MODULE EXPORT
+module.exports = connection;
 
 
 
