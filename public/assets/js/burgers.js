@@ -12,5 +12,21 @@ $(function () {
         });
     });
 
+    // THIS GRABS THE USER INPUT AND PASSES IT INTO THE POST METHOD
+    $(".create-form").on("submit", function (event) {
+        event.preventDefault();
+        var newBurger = {
+            burger_name: $("#burger").val().trim(),
+            devoured: 0
+        };
+        $.ajax("/api/burgers", {
+            type: "POST",
+            data: newBurger
+        }).then(function () {
+            console.log("Created A New Burger!");
+            location.reload();
+        })
+    });
+
 
 });
