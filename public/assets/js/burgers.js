@@ -28,5 +28,14 @@ $(function () {
         })
     });
 
-
+    // THIS REMOVES A DEVOURED BURGER 
+    $(".delete").on("click", function () {
+        var burgerId = $(this).attr("id");
+        $.ajax("/api/burgers/" + burgerId, {
+            type: "DELETE"
+        }).then(function () {
+            console.log("Deleted Burger!");
+            location.reload();
+        })
+    });
 });
