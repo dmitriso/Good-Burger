@@ -8,6 +8,11 @@ body {
     margin: 0 auto;
 
 }
+ 
+.logo {
+    margin-left: -11em;
+    margin-right: 0em;
+}
 
 div {
     padding-top: 1em;
