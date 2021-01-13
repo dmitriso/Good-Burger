@@ -1,6 +1,7 @@
-USE burgers;
+-- DESIGNATES WHICH DATABASE TO BE AFFECTED
+USE burgers_db;
 
--- SEED QUERIES
+-- SEED QUERIES FOR TESTING PURPOSES
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Goodburger",false);
 
