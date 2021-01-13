@@ -1,6 +1,7 @@
 $(function () {
     // THIS FUNCTION GRABS THE USER INPUT FROM THE FRONT-END AND PASSES IT INTO THE PUT METHOD
     $(".devoured").on("click", function (event) {
+        event.preventDefault();
         var id = $(this).attr("id");
         var newBurgerState = { devoured: 1 };
         $.ajax("/api/burgers/" + id, {
@@ -30,6 +31,7 @@ $(function () {
 
     // THIS REMOVES A DEVOURED BURGER 
     $(".delete").on("click", function () {
+        event.preventDefault();
         var burgerId = $(this).attr("id");
         $.ajax("/api/burgers/" + burgerId, {
             type: "DELETE"
