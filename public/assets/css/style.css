@@ -1,0 +1,67 @@
+/* GOOD-BURGER STYLE SHEET */
+body {
+    text-align: center;
+    background-image: linear-gradient(rgb(0, 197, 181), rgb(255, 255, 255));
+    background-size: cover;
+    background-repeat:no-repeat;
+    max-width: 30em;
+    margin: 0 auto;
+
+}
+
+div {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h1 {
+    margin-bottom: 0em;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+
+button {
+    margin: 0 auto;
+}
+
+input {
+    margin-left: 1em;
+}
+
+.form {
+   background-color: rgb(255, 255, 255);
+   padding-left: 1em;
+   padding-right: 1em;
+   margin: 0 auto;
+   border-radius: 1em;
+ 
+}
+
+.devour {
+    background-color: rgb(255, 255, 255);
+
+    margin: 0 auto;
+    float: left;
+    border-radius: 1em;
+}
+
+.devour_list {
+    justify-content: center;
+}
+
+.digest {
+    background-color: rgb(255, 255, 255);
+
+    margin: 0 auto;
+    float: right;
+    border-radius: 1em;
+    
+}
+
