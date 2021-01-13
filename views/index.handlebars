@@ -1,37 +1,42 @@
-<h1>Good-Burger</h1>
+<body>
+  <main>
+    <div>
+      <h1>Good Burger</h1>
+      <p>Home Of The Good Burger</p>
+    </div>
+    <div class="form">
+      <h2>May I Take Your Order?</h2>
+      <form class="create-form form-inline">
+        <div class="form-group">
+          <label for="bu">Burger Name: </label>
+          <input type="text" id="burger" name="name">
+        </div>
+        <button type="submit" class="btn btn-warning">Order Burger</button>
+      </form>
+    </div>
 
+    <div class="devour">
+      <h2>Burgers To Eat!</h2>
+      <ul class="devour_list">
+        {{#each burgers}}
+        {{#unless devoured}}
+        <p>{{burger_name}}</p>
+        <button class="devoured btn btn-warning" id={{id}}>Devour!</button>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
 
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="bu">Burger Name:</label>
-    <input type="text" id="burger" name="name">
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
-
-
-<h2>Burgers To Eat!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  <h3>{{burger_name}}</h3>
-  <button class="devoured" id={{id}}>Devour!</button>
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  <h3>{{burger_name}}</h3>
-  <button class="delete" id={{id}}>Digest!</button>
-  {{/if}}
-  {{/each}}
-</ul>
+    <div class="digest">
+      <h2>Devoured!</h2>
+      <ul class="digest_list">
+        {{#each burgers}}
+        {{#if devoured}}
+        <p>{{burger_name}}</p>
+        <button class="delete btn btn-warning" id={{id}}>Digest!</button>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </main>
+</body>
