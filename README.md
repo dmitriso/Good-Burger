@@ -24,7 +24,7 @@ Home Of The Good Burger
 
 
 
-![Usage-Gif]()
+![Usage-Gif](./public/assets/gifs/Good-Burger.gif)
 
 
 <p>To use this application navigate to the bottom of this read me page and click on the "Heroku-Deployed-Application" link. You will be brought to a server instance of the working app! Once located on the main page, enter a burger of your choosing to the text area. You can then click on the "Add Burger!" button to create your new burger. Your new burger will be displayed in the "Burgers To Eat!" list. Each burger will have a devour button attached to it. Once clicked, the selected burger will be devoured and removed from the "Ready To Eat!" list and placed in the "Devoured!" list. Along with adding a burger and devouring a burger, you may also delete a devoured burger from its list by clicking on the "Composte!" button. </p>
@@ -42,6 +42,8 @@ Home Of The Good Burger
 * [GitBash](https://git-scm.com/downloads)
 * [Node-Package-Manager](https://www.npmjs.com/)
 * [Heroku-App](https://www.heroku.com/)
+* [Bootstrap](https://getbootstrap.com/)
+
 
 <br>
 
@@ -49,7 +51,7 @@ Home Of The Good Burger
 
 * [Heroku-Deployed-App](https://aqueous-headland-38171.herokuapp.com/)
 * [GitHub-Repository](https://github.com/dmitriso/Good-Burger)
-* [Video-Guide]()
+* [Usage-Video-Guide](https://youtu.be/fRXYo8s8mYU)
 
 <br>
 

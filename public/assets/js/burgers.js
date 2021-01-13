@@ -30,7 +30,7 @@ $(function () {
     });
 
     // THIS REMOVES A DEVOURED BURGER 
-    $(".delete").on("click", function () {
+    $(".delete").on("click", function (event) {
         event.preventDefault();
         var burgerId = $(this).attr("id");
         $.ajax("/api/burgers/" + burgerId, {
